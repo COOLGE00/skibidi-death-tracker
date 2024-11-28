@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skibidi Toilet Kill Tracker</title>
+    <style>
+        body {
+            font-family: 'Gloock', serif; /* Gothic, serious font */
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            background: radial-gradient(circle, #000000, #2c2c2c); /* Dark, almost void-like background */
+            color: #e0e0e0; /* Faded gray color for that "dusty" feel */
+            overflow: hidden;
+        }
+        h1 {
+            color: #8B0000; /* Blood red for deep loss */
+            text-shadow: 0 0 20px rgba(255, 0, 0, 0.6), 0 0 30px rgba(255, 0, 0, 0.5); /* Glowing red to signify anguish */
+            animation: fadeInOut 5s ease-in-out infinite; /* Subtle fade-out animation */
+        }
+        p {
+            font-size: 18px;
+            color: #f0f0f0;
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+            margin-top: 30px;
+            animation: fadeInOut 10s ease-in-out infinite;
+        }
+        input, button {
+            padding: 15px;
+            margin: 15px;
+            font-size: 18px;
+            border: none;
+            border-radius: 10px;
+            background-color: #800000; /* Dark red to symbolize grief */
+            color: #e0e0e0;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.7); /* Glowing effect */
+        }
+        button:hover {
+            background-color: #550000; /* Darker red for sadness */
+        }
+        .result {
+            margin-top: 30px;
+            font-size: 28px;
+            font-weight: bold;
+            color: #ccc; /* Faded, gray text to give an impression of decay */
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.2), 0 0 30px rgba(255, 255, 255, 0.3);
+            animation: fadeInOut 8s ease-in-out infinite;
+        }
+        @keyframes fadeInOut {
+            0% { opacity: 0; }
+            50% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css2?family=Gloock&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>Skibidi Toilet Kill Tracker</h1>
+    <p>The loss is unbearable... How many Skibidi Toilets have fallen today?</p>
+    <input type="date" id="dateInput">
+    <button onclick="trackKills()">Check Kills</button>
+    <div class="result" id="result"></div>
+
+    <script>
+        function trackKills() {
+            const dateInput = document.getElementById("dateInput").value;
+            const resultDiv = document.getElementById("result");
+
+            if (dateInput) {
+                const kills = Math.floor(Math.random() * 1_000_000_000_000) + 1;
+                resultDiv.textContent = `So many have fallen... Skibidi Toilets killed on ${dateInput}: ${kills.toLocaleString()}`;
+            } else {
+                resultDiv.textContent = "Please select a date... The pain is too much to bear.";
+            }
+        }
+    </script>
+
+    <!-- Embedded YouTube Video for Sad Music -->
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/04khITCJ2C4?autoplay=1&loop=1&playlist=04khITCJ2C4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</body>
+</html>
